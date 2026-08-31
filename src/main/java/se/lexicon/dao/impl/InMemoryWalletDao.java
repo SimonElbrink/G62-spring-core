@@ -1,10 +1,12 @@
 package se.lexicon.dao.impl;
 
+import org.springframework.stereotype.Component;
 import se.lexicon.dao.WalletDao;
 import se.lexicon.model.Wallet;
 
 import java.util.*;
 
+@Component
 public class InMemoryWalletDao implements WalletDao {
 
     private final Map<String, Wallet> storage = new HashMap<>();

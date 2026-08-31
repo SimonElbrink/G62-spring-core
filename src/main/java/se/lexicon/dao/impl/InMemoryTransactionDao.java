@@ -1,11 +1,13 @@
 package se.lexicon.dao.impl;
 
+import org.springframework.stereotype.Component;
 import se.lexicon.dao.TransactionDao;
 import se.lexicon.model.Transaction;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Component
 public class InMemoryTransactionDao implements TransactionDao {
 
     public Map<String, Transaction> storage = new HashMap<>();

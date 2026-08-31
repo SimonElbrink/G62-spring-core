@@ -1,5 +1,7 @@
 package se.lexicon.service.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import se.lexicon.dao.TransactionDao;
 import se.lexicon.dao.WalletDao;
 import se.lexicon.model.Transaction;
@@ -9,7 +11,7 @@ import se.lexicon.service.WalletService;
 
 import java.math.BigDecimal;
 
-
+@Component
 public class WalletServiceImpl implements WalletService {
 
     private WalletDao walletDao;
@@ -17,6 +19,7 @@ public class WalletServiceImpl implements WalletService {
 
 
 
+    @Autowired
     public WalletServiceImpl(WalletDao walletDao, TransactionDao transactionDao) {
         this.walletDao = walletDao;
         this.transactionDao = transactionDao;

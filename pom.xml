@@ -14,4 +14,29 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <dependencies>
+        <!--
+        Why spring-context?
+        The spring-context module is essential for building Spring applications as it provides the core functionality for dependency injection and bean management.
+        It allows you to define beans, configure them, and manage their lifecycle within the application context.
+         -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>7.0.1</version>
+        </dependency>
+
+        <!--
+        Why spring-test
+        The spring-test module is used for testing Spring components.
+        It provides support for loading the application context and managing transactions during tests.
+        -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>7.0.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
 </project>
