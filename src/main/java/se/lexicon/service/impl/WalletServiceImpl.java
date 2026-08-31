@@ -1,7 +1,7 @@
 package se.lexicon.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import se.lexicon.config.WalletLimitConfig;
 import se.lexicon.dao.TransactionDao;
 import se.lexicon.dao.WalletDao;
@@ -12,7 +12,7 @@ import se.lexicon.service.WalletService;
 
 import java.math.BigDecimal;
 
-@Component
+@Service
 public class WalletServiceImpl implements WalletService {
 
     private WalletDao walletDao;
